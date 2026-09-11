@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color: #28213f;
+  font-family: Arial, sans-serif;
+  background: #f8f7ff;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f8f7ff;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: #f8f7ff;
+}
+
+.header {
+  height: 142px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: #23183e;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(25px, 3vw, 34px);
+}
+
+.Navbar {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 18px;
+  padding: 10px 28px;
+  background: linear-gradient(100deg, #8d42ee, #b44cec);
+}
+
+.Navbar a,
+.Navbar button {
+  border: 0;
+  padding: 0;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  font: 700 15px Arial, sans-serif;
+  text-decoration: none;
+}
+
+.Navbar a:hover,
+.Navbar button:hover,
+.Navbar .active {
+  color: #221339;
+}
+
+.home {
+  min-height: 530px;
+  padding: 53px 5vw 110px;
+}
+
+.product-grid {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 76px;
+}
+
+.items {
+  padding: 19px 15px 14px;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid #e8e3f5;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 7px 20px rgba(84, 57, 136, .08);
+}
+
+.items img {
+  width: 100%;
+  height: 162px;
+  object-fit: cover;
+}
+
+.items h2 {
+  margin: 17px 0 15px;
+  font-size: 18px;
+}
+
+.items h3 {
+  margin: 0 0 16px;
+  color: #199878;
+  font-size: 17px;
+}
+
+.items button {
+  width: 100%;
+  padding: 12px 8px;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(100deg, #8435e8, #ad46ed);
+  cursor: pointer;
+  font: 700 15px Arial, sans-serif;
+}
+
+.items button:hover {
+  background: #6621c2;
+}
+
+.footer {
+  min-height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #817b94;
+  font-size: 12px;
+}
+
+@media (max-width: 850px) {
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .header {
+    height: 110px;
+  }
+
+  .Navbar {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 14px 18px;
+  }
+
+  .Navbar a,
+  .Navbar button {
+    flex: 0 0 auto;
+    font-size: 13px;
+  }
+
+  .home {
+    padding: 28px 14px 60px;
+  }
+
+  .product-grid {
+    gap: 14px;
+  }
+
+  .items {
+    padding: 12px 9px 10px;
+  }
+
+  .items img {
+    height: 130px;
+  }
+
+  .items h2 {
+    font-size: 14px;
+  }
+
+  .items h3,
+  .items button {
+    font-size: 13px;
+  }
+}
